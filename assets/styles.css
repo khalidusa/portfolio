@@ -88,7 +88,7 @@ nav a:hover { color: var(--ink); }
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 
 /* Stat band */
-.band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; padding: 36px 0 88px; border-top: 1px solid var(--line); }
+.band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding: 36px 0 88px; border-top: 1px solid var(--line); }
 .band b { display: block; font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; }
 .band span { display: block; font-size: 14px; color: var(--muted); margin-top: 6px; max-width: 22ch; }
 
