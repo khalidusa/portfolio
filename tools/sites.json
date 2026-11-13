@@ -1,0 +1,103 @@
+[
+ {
+  "slug": "vancecredit",
+  "url": "https://vancecredit.com/"
+ },
+ {
+  "slug": "vance-redesign",
+  "url": "https://halit-88.github.io/vance-credit-redesign/"
+ },
+ {
+  "slug": "greenlight",
+  "url": "https://greenlightrecover.com/"
+ },
+ {
+  "slug": "veridex",
+  "url": "https://veridexmobility.com/"
+ },
+ {
+  "slug": "ezrentals",
+  "url": "https://ezrentalsandleasing.com/"
+ },
+ {
+  "slug": "ez-rent-app",
+  "url": "https://rent.ezrentalsandleasing.com/",
+  "views": [
+   {
+    "url": "https://rent.ezrentalsandleasing.com/",
+    "js": "document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',s.dataset.step==='vehicle'));window.scrollTo(0,0)"
+   },
+   {
+    "url": "https://rent.ezrentalsandleasing.com/",
+    "js": "document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',s.dataset.step==='license'));window.scrollTo(0,0)"
+   },
+   {
+    "url": "https://rent.ezrentalsandleasing.com/",
+    "js": "document.querySelectorAll('.step').forEach(s=>s.classList.toggle('active',s.dataset.step==='agreement'));window.scrollTo(0,0)"
+   }
+  ]
+ },
+ {
+  "slug": "ez-verify",
+  "url": "https://verify.ezrentalsandleasing.com/",
+  "views": [
+   {
+    "url": "https://verify.ezrentalsandleasing.com/"
+   },
+   {
+    "url": "https://verify.ezrentalsandleasing.com/call.html"
+   },
+   {
+    "url": "https://verify.ezrentalsandleasing.com/answer.html"
+   }
+  ]
+ },
+ {
+  "slug": "ez-toll",
+  "url": "https://halit-88.github.io/ez-toll/"
+ },
+ {
+  "slug": "ez-fleet",
+  "url": "https://ez-rentals-fleet-production.up.railway.app/"
+ },
+ {
+  "slug": "eztow",
+  "url": "https://eztownow.com/"
+ },
+ {
+  "slug": "gtacfinance",
+  "url": "https://gtacfinance.com/"
+ },
+ {
+  "slug": "gtac-cardealers",
+  "url": "https://halit-88.github.io/cardealers-gtacfinance-static/"
+ },
+ {
+  "slug": "gtac-dealers",
+  "url": "https://halit-88.github.io/gtac-dealers-site/"
+ },
+ {
+  "slug": "gtac-transformation",
+  "url": "https://halit-88.github.io/gtac-financial-transformation/"
+ },
+ {
+  "slug": "alina-website",
+  "url": "https://halit-88.github.io/alina-website/"
+ },
+ {
+  "slug": "alina-partners",
+  "url": "https://halit-88.github.io/alina-partners/"
+ },
+ {
+  "slug": "alina-rentals",
+  "url": "https://halit-88.github.io/alina-rentals/"
+ },
+ {
+  "slug": "somados",
+  "url": "https://somados.com/"
+ },
+ {
+  "slug": "mody",
+  "url": "https://modycarwash.com/"
+ }
+]
