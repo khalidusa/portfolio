@@ -15,14 +15,6 @@ window.PROJECTS = [
     url: ''
   },
   {
-    slug: 'vancecredit', kind: 'site', group: 'web',
-    title: 'Credit repair company website',
-    role: 'Built and run end to end',
-    summary: 'Lead-generation site for a consumer credit company: savings calculators, a sign-up funnel that feeds the CRM, and the landing pages behind the paid social campaigns.',
-    tags: ['Lead generation', 'Landing pages', 'CRM integration', 'GA4'],
-    url: 'https://vancecredit.com/'
-  },
-  {
     slug: 'vance-redesign', kind: 'site', group: 'web',
     title: 'Credit repair website redesign',
     role: 'Proposal and build',
