@@ -35,6 +35,16 @@
   grid.innerHTML = P.map(card).join('');
   document.getElementById('s-projects').textContent = P.length;
 
+  // Hero reel: first screen of every project, doubled for a seamless loop.
+  const reelItems = P.map((p) => `<figure class="reel-item" data-slug="${p.slug}"><div class="frame"><img src="${src(p, 1)}" alt="${p.title}" loading="lazy"></div><figcaption>${p.title}</figcaption></figure>`).join('');
+  const reel = document.getElementById('reel');
+  reel.innerHTML = reelItems + reelItems.replace(/<figure /g, '<figure aria-hidden="true" ');
+  reel.addEventListener('click', (e) => {
+    const f = e.target.closest('.reel-item'); if (!f) return;
+    const p = P.find((x) => x.slug === f.dataset.slug);
+    open([1, 2, 3, 4].map((i) => ({ src: src(p, i), cap: p.title })), 0);
+  });
+
   // Tools marquee: the list is doubled so the loop is seamless.
   const tools = window.TOOLS.map((t) => `<span>${t}</span>`).join('');
   document.getElementById('track').innerHTML = tools + tools;
