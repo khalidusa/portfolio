@@ -35,6 +35,14 @@
   grid.innerHTML = P.map(card).join('');
   document.getElementById('s-projects').textContent = P.length;
 
+  // Tools marquee: the list is doubled so the loop is seamless.
+  const tools = window.TOOLS.map((t) => `<span>${t}</span>`).join('');
+  document.getElementById('track').innerHTML = tools + tools;
+
+  // Ads proof gallery
+  const proof = document.getElementById('proof');
+  proof.innerHTML = window.PROOF.map((x, i) => `<figure data-proof="${i}"><img loading="lazy" src="${x.src}" alt="${x.cap}"><figcaption>${x.cap}</figcaption></figure>`).join('');
+
   // Filters
   const tabs = document.querySelectorAll('.filters button');
   tabs.forEach((b) => b.addEventListener('click', () => {
@@ -43,31 +51,35 @@
     grid.querySelectorAll('.card').forEach((c) => { c.style.display = f === 'all' || c.dataset.group === f ? '' : 'none'; });
   }));
 
-  // Best campaigns
-  document.getElementById('ads-rows').innerHTML = window.ADS.best.map((r) => `
-    <div><span class="lbl">${r.label}</span><span class="n">${r.leads} leads</span><span class="c"><strong>$${r.cpl.toFixed(2)}</strong> per lead</span></div>`).join('');
-
   // Scroll reveal
-  const els = document.querySelectorAll('.reveal, .card');
+  const els = document.querySelectorAll('.reveal, .card, .proof figure');
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
     els.forEach((el) => io.observe(el));
   } else {
     els.forEach((el) => el.classList.add('in'));
   }
 
-  // Lightbox
+  // Lightbox: works on any list of {src, cap}
   const lb = document.getElementById('lb');
   const img = document.getElementById('lb-img');
   const cap = document.getElementById('lb-cap');
-  let cur = null, idx = 1;
-  function show() { img.src = src(cur, idx); cap.textContent = `${cur.title}, ${idx} of 4`; }
-  function open(slug, i) { cur = P.find((p) => p.slug === slug); idx = +i; show(); lb.hidden = false; document.body.style.overflow = 'hidden'; }
+  let list = [], idx = 0;
+  function show() { img.src = list[idx].src; cap.textContent = `${list[idx].cap} (${idx + 1} of ${list.length})`; }
+  function open(l, i) { list = l; idx = i; show(); lb.hidden = false; document.body.style.overflow = 'hidden'; }
   function close() { lb.hidden = true; document.body.style.overflow = ''; }
-  function step(d) { idx = ((idx - 1 + d + 4) % 4) + 1; show(); }
-  grid.addEventListener('click', (e) => { const s = e.target.closest('.shot'); if (s) open(s.dataset.slug, s.dataset.i); });
+  function step(d) { idx = (idx + d + list.length) % list.length; show(); }
+  grid.addEventListener('click', (e) => {
+    const s = e.target.closest('.shot'); if (!s) return;
+    const p = P.find((x) => x.slug === s.dataset.slug);
+    open([1, 2, 3, 4].map((i) => ({ src: src(p, i), cap: p.title })), +s.dataset.i - 1);
+  });
+  proof.addEventListener('click', (e) => {
+    const f = e.target.closest('figure'); if (!f) return;
+    open(window.PROOF, +f.dataset.proof);
+  });
   lb.querySelector('.lb-x').onclick = close;
   lb.querySelector('.prev').onclick = () => step(-1);
   lb.querySelector('.next').onclick = () => step(1);

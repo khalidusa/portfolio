@@ -136,13 +136,12 @@ window.PROJECTS = [
   }
 ];
 
-// Best paid social results only (last 30 days, two strongest campaigns).
-window.ADS = {
-  leads: 724,
-  spend: 2084,
-  cpl: 2.88,
-  best: [
-    { label: 'Comparison ad campaign', leads: 253, cpl: 2.76 },
-    { label: 'Sign-up form campaign', leads: 471, cpl: 2.94 }
-  ]
-};
+// Ads Manager screenshots: company names and spend are blurred, no numbers in the copy.
+window.PROOF = [
+  { src: 'assets/shots/ads/2.webp', cap: 'Account overview: daily lead trend by campaign' },
+  { src: 'assets/shots/ads/1.webp', cap: 'Lead form campaigns for a credit services company' },
+  { src: 'assets/shots/ads/4.webp', cap: 'Ad-level results: phone calls and message conversations' },
+  { src: 'assets/shots/ads/3.webp', cap: 'Message campaigns for a car rental company' }
+];
+
+window.TOOLS = ['Meta Ads Manager', 'Google Analytics 4', 'Google Tag Manager', 'Zapier', 'Twilio', 'GoHighLevel', 'Mailchimp', 'Credit Repair Cloud', 'WordPress', 'Elementor', 'Stripe', 'Calendly', 'ElevenLabs', 'React', 'Node.js', 'PostgreSQL', 'Railway', 'Cloudflare', 'Canva', 'Claude'];
