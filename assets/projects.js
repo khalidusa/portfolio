@@ -2,7 +2,7 @@
 // kind: "site" (desktop screenshots) or "app" (narrow app screens shown in phone frames).
 window.PROJECTS = [
   {
-    slug: 'client-portal', kind: 'portal', group: 'apps', feature: true,
+    slug: 'p01', kind: 'portal', group: 'apps', feature: true,
     title: 'Client portal with AI calling',
     role: 'Designed and built',
     summary: 'Private portal for a financial services sales team. New leads from ad forms and booked calls arrive on their own, go to the next agent in rotation, and get an AI voice call within two minutes that puts interested people straight through to an agent. Managers see every lead and file in one pipeline.',
@@ -11,128 +11,112 @@ window.PROJECTS = [
       'Two-way CRM sync, round-robin assignment and per-client checklists',
       'WhatsApp and Telegram call reminders, two-step sign-in, encrypted data and a full activity log'
     ],
-    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'ElevenLabs voice AI', 'Twilio', 'Facebook Lead Ads'],
-    url: ''
+    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'ElevenLabs voice AI', 'Twilio', 'Facebook Lead Ads']
   },
   {
-    slug: 'vance-redesign', kind: 'site', group: 'web',
+    slug: 'p02', kind: 'site', group: 'web',
     title: 'Credit repair website redesign',
     role: 'Proposal and build',
     summary: 'Full redesign pitched to management: clearer navigation, stronger proof sections, and structure written for Google and AI assistants (SEO, AEO, GEO).',
-    tags: ['Redesign', 'SEO / AEO / GEO', 'Copywriting'],
-    url: 'https://halit-88.github.io/vance-credit-redesign/'
+    tags: ['Redesign', 'SEO / AEO / GEO', 'Copywriting']
   },
   {
-    slug: 'greenlight', kind: 'site', group: 'web',
+    slug: 'p03', kind: 'site', group: 'web',
     title: 'B2B SaaS site for auto dealers',
     role: 'Brand, copy and build',
     summary: 'Marketing site for a lead-recovery product that helps dealerships win back declined buyers, with ROI figures, an article library and a dealer email and SMS program behind it.',
-    tags: ['B2B marketing', 'Content', 'Email and SMS'],
-    url: 'https://greenlightrecover.com/'
+    tags: ['B2B marketing', 'Content', 'Email and SMS']
   },
   {
-    slug: 'veridex', kind: 'site', group: 'web',
+    slug: 'p04', kind: 'site', group: 'web',
     title: 'Fleet software product site',
     role: 'Positioning and build',
     summary: 'Product site for rental-fleet operations software, organized around the jobs it replaces, with a founder demo booking flow.',
-    tags: ['Product marketing', 'SaaS', 'Demo funnel'],
-    url: 'https://veridexmobility.com/'
+    tags: ['Product marketing', 'SaaS', 'Demo funnel']
   },
   {
-    slug: 'ezrentals', kind: 'site', group: 'web',
+    slug: 'p05', kind: 'site', group: 'web',
     title: 'Car rental company website',
     role: 'Built and maintain',
     summary: 'Booking-focused site for a Maryland car rental company: live vehicle list, all-in pricing, and inquiry and booking forms.',
-    tags: ['Local business', 'Booking forms', 'Conversion'],
-    url: 'https://ezrentalsandleasing.com/'
+    tags: ['Local business', 'Booking forms', 'Conversion']
   },
   {
-    slug: 'alina', kind: 'site', group: 'web',
+    slug: 'p06', kind: 'site', group: 'web',
     title: 'Rideshare car rental brand',
     role: 'Three-page campaign',
     summary: 'Brand site plus two audience pages: one recruiting car owners to list idle vehicles, one recruiting Uber and Lyft drivers, each with its own earnings calculator.',
-    tags: ['Two-sided marketing', 'Calculators', 'Landing pages'],
-    url: 'https://halit-88.github.io/alina-website/'
+    tags: ['Two-sided marketing', 'Calculators', 'Landing pages']
   },
   {
-    slug: 'eztow', kind: 'site', group: 'web',
+    slug: 'p07', kind: 'site', group: 'web',
     title: 'Towing company website',
     role: 'Design and build',
     summary: 'Call-first site for a 24/7 towing service: click-to-call everywhere, service menu and a quote flow built for people on the side of the road.',
-    tags: ['Local SEO', 'Click to call', 'Mobile first'],
-    url: 'https://eztownow.com/'
+    tags: ['Local SEO', 'Click to call', 'Mobile first']
   },
   {
-    slug: 'gtacfinance', kind: 'site', group: 'web',
+    slug: 'p08', kind: 'site', group: 'web',
     title: 'Financial education platform',
     role: 'Web operations',
     summary: 'Membership site with interactive tools (loan wizard, credit calculators, readiness quiz) and Stripe subscription billing on daily, weekly and monthly plans.',
-    tags: ['WordPress', 'Stripe', 'Interactive tools'],
-    url: 'https://gtacfinance.com/'
+    tags: ['WordPress', 'Stripe', 'Interactive tools']
   },
   {
-    slug: 'gtac-cardealers', kind: 'site', group: 'web',
+    slug: 'p09', kind: 'site', group: 'web',
     title: 'Dealer partnership site',
     role: 'Build',
     summary: 'B2B site pitching dealerships on turning declined leads into revenue, with the market data and partner sign-up flow.',
-    tags: ['B2B', 'Lead capture'],
-    url: 'https://halit-88.github.io/cardealers-gtacfinance-static/'
+    tags: ['B2B', 'Lead capture']
   },
   {
-    slug: 'gtac-dealers', kind: 'site', group: 'web',
+    slug: 'p10', kind: 'site', group: 'web',
     title: 'Dealer program landing page',
     role: 'Build',
     summary: 'Single-goal landing page with video, a numbered value list and two clear calls to action.',
-    tags: ['Landing page', 'Video'],
-    url: 'https://halit-88.github.io/gtac-dealers-site/'
+    tags: ['Landing page', 'Video']
   },
   {
-    slug: 'gtac-transformation', kind: 'site', group: 'web',
+    slug: 'p11', kind: 'site', group: 'web',
     title: 'Credit improvement campaign page',
     role: 'Build',
     summary: 'Campaign landing page for a credit-building program, built around one explainer video and an eligibility checklist.',
-    tags: ['Campaign page', 'Video'],
-    url: 'https://halit-88.github.io/gtac-financial-transformation/'
+    tags: ['Campaign page', 'Video']
   },
   {
-    slug: 'somados', kind: 'site', group: 'web',
+    slug: 'p12', kind: 'site', group: 'web',
     title: 'Travel booking website (Arabic)',
     role: 'Founder, built solo',
     summary: 'Flights, visas and hotels between Iraq and Turkey. Fares refresh automatically, route pages rebuild and ping search engines, and bookings go straight to WhatsApp.',
-    tags: ['Arabic / RTL', 'Automation', 'SEO'],
-    url: 'https://somados.com/'
+    tags: ['Arabic / RTL', 'Automation', 'SEO']
   },
   {
-    slug: 'mody', kind: 'site', group: 'web',
+    slug: 'p13', kind: 'site', group: 'web',
     title: 'Car wash and detailing website',
     role: 'Design and build',
     summary: 'Premium local service site with packages, proof points and a booking call to action above the fold.',
-    tags: ['Local business', 'Branding'],
-    url: 'https://modycarwash.com/'
+    tags: ['Local business', 'Branding']
   },
   {
-    slug: 'ez-rent-app', kind: 'app', group: 'apps',
+    slug: 'p14', kind: 'app', group: 'apps',
     title: 'Self-service car rental app',
     role: 'Product and build',
     summary: 'Customers pick a car, enter driver and license details, sign the agreement and verify identity, all from their phone, with no counter visit.',
-    tags: ['Web app', 'E-signature', 'Onboarding flow'],
-    url: 'https://rent.ezrentalsandleasing.com/'
+    tags: ['Web app', 'E-signature', 'Onboarding flow']
   },
   {
-    slug: 'ez-verify', kind: 'app', group: 'apps',
+    slug: 'p15', kind: 'app', group: 'apps',
     title: 'Video identity verification',
     role: 'Build',
     summary: 'Two-sided video call: the customer joins from a link, the agent checks their license live from a console.',
-    tags: ['Video calling', 'Real time'],
-    url: 'https://verify.ezrentalsandleasing.com/'
+    tags: ['Video calling', 'Real time']
   },
   {
-    slug: 'ez-toll', kind: 'site', group: 'apps',
+    slug: 'p16', kind: 'site', group: 'apps',
     title: 'Toll violation reassignment tool',
     role: 'Build',
     summary: 'Splits the monthly toll bundle PDF into individual violations, matches each to the renter, and sends the reassignment packets.',
-    tags: ['Automation', 'Google Sheets', 'PDF processing'],
-    url: 'https://halit-88.github.io/ez-toll/'
+    tags: ['Automation', 'Google Sheets', 'PDF processing']
   }
 ];
 
