@@ -2,6 +2,19 @@
 // kind: "site" (desktop screenshots) or "app" (narrow app screens shown in phone frames).
 window.PROJECTS = [
   {
+    slug: 'client-portal', kind: 'portal', group: 'apps', feature: true,
+    title: 'Client portal with AI calling',
+    role: 'Designed and built',
+    summary: 'Private portal for a financial services sales team. New leads from ad forms and booked calls arrive on their own, go to the next agent in rotation, and get an AI voice call within two minutes that puts interested people straight through to an agent. Managers see every lead and file in one pipeline.',
+    points: [
+      'AI voice calls with live transfer to a free agent, plus summary, transcript and recording on each file',
+      'Two-way CRM sync, round-robin assignment and per-client checklists',
+      'WhatsApp and Telegram call reminders, two-step sign-in, encrypted data and a full activity log'
+    ],
+    tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'ElevenLabs voice AI', 'Twilio', 'Facebook Lead Ads'],
+    url: ''
+  },
+  {
     slug: 'vancecredit', kind: 'site', group: 'web',
     title: 'Credit repair company website',
     role: 'Built and run end to end',
