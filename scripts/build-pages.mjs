@@ -35,7 +35,7 @@ function page(p, i) {
   const shots = [1, 2, 3, 4];
   const isApp = p.kind === 'app';
   const points = p.points ? `<ul class="pp-points">${p.points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : '';
-  const note = p.feature ? `<p class="pp-note">Private internal tool. Screens use blurred sample data.</p>` : '';
+  const note = '';
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -82,7 +82,6 @@ function page(p, i) {
   <div class="pp-shots${isApp ? ' app' : ''}">
     ${shots.map((n) => `<figure><img src="../../assets/shots/${p.slug}/${n}.webp" alt="${esc(p.title)}, screen ${n}" loading="${n === 1 ? 'eager' : 'lazy'}"></figure>`).join('\n    ')}
   </div>
-  <p class="fine">Company names are hidden for client privacy.</p>
   <nav class="pp-nav" aria-label="More projects">
     <a href="../${urlSlug(prev)}/"><small>Previous</small>${esc(prev.title)}</a>
     <a href="../${urlSlug(next)}/" class="nx"><small>Next</small>${esc(next.title)}</a>

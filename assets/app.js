@@ -18,7 +18,7 @@
   function card(p) {
     const kindCls = p.kind === 'app' ? 'app' : 'site';
     const points = p.points ? `<ul class="points">${p.points.map((t) => `<li>${t}</li>`).join('')}</ul>` : '';
-    const link = p.feature ? `<span class="private">Private internal tool. Screens use blurred sample data.</span>` : '';
+    const link = '';
     return `<article class="card ${kindCls}${p.feature ? ' feature' : ''}" data-group="${p.group}">
       <div class="shots">${media(p)}</div>
       <div class="body">
