@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import crypto from 'node:crypto';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const SITE = 'https://khalidusa.github.io/portfolio';
@@ -19,6 +20,12 @@ export const urlSlug = (p) => p.title.toLowerCase().replace(/\(.*?\)/g, '').repl
 const blurb = (p) => {
   const first = p.summary.split(/(?<=\.)\s/)[0];
   return first.length > 160 ? first.slice(0, 157).replace(/\s\S*$/, '') + '...' : first;
+};
+
+// Short hash of the preview image, so LinkedIn fetches a fresh copy whenever the image changes.
+const ogVersion = (slug) => {
+  const f = path.join(ROOT, 'assets/og', `${slug}.jpg`);
+  return fs.existsSync(f) ? crypto.createHash('sha1').update(fs.readFileSync(f)).digest('hex').slice(0, 8) : '1';
 };
 
 function page(p, i) {
@@ -43,7 +50,7 @@ function page(p, i) {
 <meta property="og:title" content="${esc(p.title)}">
 <meta property="og:description" content="${esc(blurb(p))}">
 <meta property="og:url" content="${SITE}/work/${slug}/">
-<meta property="og:image" content="${SITE}/assets/og/${slug}.jpg">
+<meta property="og:image" content="${SITE}/assets/og/${slug}.jpg?v=${ogVersion(slug)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
 <meta property="og:image:alt" content="${esc(p.title)}: screenshot of the project">
