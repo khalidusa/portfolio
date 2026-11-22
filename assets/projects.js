@@ -2,6 +2,30 @@
 // kind: "site" (desktop screenshots) or "app" (narrow app screens shown in phone frames).
 window.PROJECTS = [
   {
+    slug: 'p17', kind: 'portal', group: 'apps', feature: true, shots: 5,
+    title: 'SO STUDIO: AI video content studio',
+    role: 'Designed and built for in-house marketing',
+    summary: 'I built SO STUDIO to keep up with the volume of video social platforms demand. One long video or podcast goes in; finished, on-brand Shorts, Reels, TikToks and episodes come out. It runs fully on a Mac and uses only rights-free footage, music and effects, so ads are not blocked or muted.',
+    points: [
+      'Every format from one upload, with speaker tracking, captions, motion graphics, music ducking and filler removal',
+      'Rights-free by design: AI-checked Pexels B-roll, licensed music and CC0 sound effects',
+      'Brand kits from any website, per-brand compliance rules, and AI-written posts sent to a scheduler after review'
+    ],
+    tags: ['AI video', 'Short-form content', 'Brand kits', 'Rights-free media', 'Runs locally']
+  },
+  {
+    slug: 'p18', kind: 'portal', group: 'apps', feature: true, shots: 5,
+    title: 'SO AI: private on-device AI assistant',
+    role: 'Designed and built, runs fully offline',
+    summary: 'A ChatGPT-style assistant that runs entirely on one Mac, with no cloud AI. I built it to show that a company can have chat, document Q&A, voice and image tools while keeping every prompt, file and customer record in-house. I can set up the same kind of private AI for any team that handles sensitive data.',
+    points: [
+      'Privacy by design: the language model, document search and speech recognition all run on localhost, so nothing is sent to an AI company',
+      'Private knowledge base (RAG): learns from PDFs, Word, slides, spreadsheets, audio and video, and answers from the company\'s own files',
+      'No per-message API bill, works without internet, and makes data-handling and NDA rules easier to meet'
+    ],
+    tags: ['Local LLM', 'RAG', 'Ollama', 'Whisper', 'Electron', 'Data privacy']
+  },
+  {
     slug: 'p01', kind: 'portal', group: 'apps', feature: true,
     title: 'Client portal with AI calling',
     role: 'Planned and built with AI tools',
@@ -128,4 +152,4 @@ window.PROOF = [
   { src: 'assets/shots/ads/3.webp', cap: 'Message campaigns for a car rental company' }
 ];
 
-window.TOOLS = ['Meta Ads Manager', 'Google Analytics 4', 'Google Tag Manager', 'Zapier', 'Twilio', 'GoHighLevel', 'Mailchimp', 'WordPress', 'Elementor', 'Stripe', 'Calendly', 'ElevenLabs', 'Cloudflare', 'Canva', 'Claude'];
+window.TOOLS = ['Meta Ads Manager', 'Google Analytics 4', 'Google Tag Manager', 'Zapier', 'Twilio', 'GoHighLevel', 'Mailchimp', 'WordPress', 'Elementor', 'Stripe', 'Calendly', 'ElevenLabs', 'Cloudflare', 'Canva', 'Claude', 'FFmpeg', 'Pexels', 'Ollama'];

@@ -89,11 +89,6 @@ nav a:hover { color: var(--ink); }
 }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
-/* Stat band */
-.band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 48px 0 112px; }
-.band > div { background: var(--panel); border-radius: var(--r-card); padding: 28px; box-shadow: inset 0 0 0 1px var(--line); }
-.band b { display: block; font-size: 44px; font-weight: 600; letter-spacing: -0.04em; line-height: 1.05; }
-.band span { display: block; font-size: 14px; color: var(--muted); margin-top: 8px; }
 
 .sec-head { text-align: center; margin-bottom: 40px; }
 .sec-head.row { display: flex; flex-direction: column; align-items: center; gap: 22px; }
@@ -130,6 +125,7 @@ nav a:hover { color: var(--ink); }
 .site .main { aspect-ratio: 16 / 10; }
 .site .thumbs { display: grid; grid-template-columns: 1fr 1fr 0.5fr; gap: 8px; }
 .site .thumbs.even { grid-template-columns: repeat(3, 1fr); }
+.site .thumbs.even.four { grid-template-columns: repeat(4, 1fr); }
 .site .thumbs .shot { aspect-ratio: 16 / 10; }
 .site .thumbs .shot.mob { aspect-ratio: auto; }
 .site .thumbs .shot.mob img { position: absolute; inset: 0; }
@@ -186,7 +182,6 @@ nav a:hover { color: var(--ink); }
   .wrap { width: calc(100% - 32px); }
   nav a:not(.nav-cta) { display: none; }
   .hero { padding-top: 56px; }
-  .band { grid-template-columns: 1fr; }
   .lb { padding: 16px; }
   .lb-nav { display: none; }
 }

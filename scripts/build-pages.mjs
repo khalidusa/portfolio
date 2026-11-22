@@ -32,7 +32,7 @@ function page(p, i) {
   const slug = urlSlug(p);
   const prev = P[(i - 1 + P.length) % P.length];
   const next = P[(i + 1) % P.length];
-  const shots = [1, 2, 3, 4];
+  const shots = Array.from({ length: p.shots || 4 }, (_, k) => k + 1);
   const isApp = p.kind === 'app';
   const points = p.points ? `<ul class="pp-points">${p.points.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>` : '';
   const note = '';

@@ -1,6 +1,8 @@
 (function () {
   const grid = document.getElementById('grid');
   const P = window.PROJECTS;
+  const count = (p) => p.shots || 4;
+  const nums = (p, from = 1) => Array.from({ length: count(p) - from + 1 }, (_, k) => k + from);
   const src = (p, i) => `assets/shots/${p.slug}/${i}.webp`;
   // Same rule as scripts/build-pages.mjs, so links match the generated pages.
   const page = (p) => `work/${p.title.toLowerCase().replace(/\(.*?\)/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}/`;
@@ -11,7 +13,7 @@
 
   function media(p) {
     if (p.kind === 'app') return `<div class="phones">${[4, 1, 2, 3].map((i) => shot(p, i)).join('')}</div>`;
-    if (p.kind === 'portal') return `${shot(p, 1, 'main')}<div class="thumbs even">${shot(p, 2)}${shot(p, 3)}${shot(p, 4)}</div>`;
+    if (p.kind === 'portal') return `${shot(p, 1, 'main')}<div class="thumbs even${count(p) === 5 ? ' four' : ''}">${nums(p, 2).map((i) => shot(p, i)).join('')}</div>`;
     return `${shot(p, 1, 'main')}<div class="thumbs">${shot(p, 2)}${shot(p, 3)}${shot(p, 4, 'mob')}</div>`;
   }
 
@@ -34,7 +36,6 @@
   }
 
   grid.innerHTML = P.map(card).join('');
-  document.getElementById('s-projects').textContent = P.length;
 
   // Hero reel: first screen of every project, doubled for a seamless loop.
   const reelItems = P.map((p) => `<figure class="reel-item" data-slug="${p.slug}"><div class="frame"><img src="${src(p, 1)}" alt="${p.title}" loading="lazy"></div><figcaption>${p.title}</figcaption></figure>`).join('');
@@ -85,7 +86,7 @@
   grid.addEventListener('click', (e) => {
     const s = e.target.closest('.shot'); if (!s) return;
     const p = P.find((x) => x.slug === s.dataset.slug);
-    open([1, 2, 3, 4].map((i) => ({ src: src(p, i), cap: p.title })), +s.dataset.i - 1);
+    open(nums(p).map((i) => ({ src: src(p, i), cap: p.title })), +s.dataset.i - 1);
   });
   proof.addEventListener('click', (e) => {
     const f = e.target.closest('figure'); if (!f) return;
