@@ -26,6 +26,18 @@ window.PROJECTS = [
     tags: ['Local LLM', 'RAG', 'Ollama', 'Whisper', 'Electron', 'Data privacy']
   },
   {
+    slug: 'p19', kind: 'portal', group: 'apps', feature: true, shots: 3,
+    title: 'Social media auto-publisher',
+    role: 'Designed and built, runs on its own',
+    summary: 'The publishing half of the content system. Finished videos land in a Dropbox folder and go out on schedule to Facebook, Instagram, TikTok and YouTube Shorts, one a day per platform, with no one logging in to post. Every week it also writes and designs branded image posts and holds them 48 hours for review before scheduling them.',
+    points: [
+      'Quality checks on every file (format, length, audio, size), with a written reason for anything rejected',
+      'Per-platform rules and queues, so a video that does not fit one platform never leaves a gap on the others',
+      'Runs on GitHub Actions every 3 hours with a permanent ledger of every post, at almost no running cost'
+    ],
+    tags: ['Automation', 'GitHub Actions', 'Buffer API', 'Cloudflare R2', 'Social media']
+  },
+  {
     slug: 'p01', kind: 'portal', group: 'apps', feature: true,
     title: 'Client portal with AI calling',
     role: 'Planned and built with AI tools',

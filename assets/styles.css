@@ -126,6 +126,7 @@ nav a:hover { color: var(--ink); }
 .site .thumbs { display: grid; grid-template-columns: 1fr 1fr 0.5fr; gap: 8px; }
 .site .thumbs.even { grid-template-columns: repeat(3, 1fr); }
 .site .thumbs.even.four { grid-template-columns: repeat(4, 1fr); }
+.site .thumbs.even.two { grid-template-columns: repeat(2, 1fr); }
 .site .thumbs .shot { aspect-ratio: 16 / 10; }
 .site .thumbs .shot.mob { aspect-ratio: auto; }
 .site .thumbs .shot.mob img { position: absolute; inset: 0; }

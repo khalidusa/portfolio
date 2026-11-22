@@ -13,7 +13,7 @@
 
   function media(p) {
     if (p.kind === 'app') return `<div class="phones">${[4, 1, 2, 3].map((i) => shot(p, i)).join('')}</div>`;
-    if (p.kind === 'portal') return `${shot(p, 1, 'main')}<div class="thumbs even${count(p) === 5 ? ' four' : ''}">${nums(p, 2).map((i) => shot(p, i)).join('')}</div>`;
+    if (p.kind === 'portal') return `${shot(p, 1, 'main')}<div class="thumbs even${count(p) === 5 ? ' four' : count(p) === 3 ? ' two' : ''}">${nums(p, 2).map((i) => shot(p, i)).join('')}</div>`;
     return `${shot(p, 1, 'main')}<div class="thumbs">${shot(p, 2)}${shot(p, 3)}${shot(p, 4, 'mob')}</div>`;
   }
 
